@@ -1,4 +1,4 @@
-// function to retrieve ranger data
+// function to retrieve f1 data
 const getData = async (season, round) => {
     let response = await axios.get(`https://ergast.com/api/f1/${season}/${round}/driverStandings.json`)
     console.log(response)
@@ -9,7 +9,7 @@ const getData = async (season, round) => {
 const rangerList = '.ranger-list'
 
 
-// Creation of the Ranger List HTML
+// Creation of the F1 List HTML
 const createList = (position, givenName, familyName, nationality, name, points) => {
     const html = `<div id=${position} class="card mt-3 mb-3" style="width: 18rem;">
     <ul class="list-group list-group-flush" id=${givenName}>
